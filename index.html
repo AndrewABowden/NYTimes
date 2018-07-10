@@ -31,63 +31,60 @@
         <!--d block makes this a block and overrides flex-->
         <div class="row d-block justify-content-center">
             <div class="col-12 header-column">
-                <h1 class="header">New York Times Search</h1>
+                <h1 class="header rounded">New York Times Search</h1>
                 <br>
                 <!-- Renders Button layout dump-->
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <div class="search-form">
-                        <h3>Search Parameters</h3>
-
+                    <div class="search-form rounded">
+                        <h3 class="header-small rounded">Search Parameters</h3>
+            
                         <form id="my-form" action="">
-
+            
                             <div class="form-group">
                                 <!--Search Term-->
                                 <label for="searchterm">Search Term:</label>
                                 <input class="form-control" id="search-term" type="text" value="" placeholder="Search..">
                                 <!--# of Records-->
-                                    </div>
-                                <div class="form-group">
-                                    <label for="searchrecordnumber">Number of Records:</label>
-                                    <input class="form-control" id="search-number" type="number" placeholder="Search..">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="searchstartyear">Start Year (Optional):</label>
-                                        <input class="form-control" id="search-start-year" type="text" placeholder="Search..">
-                                    </div>
-                                        <div class="form-group">
-                                            <label for="searchendyear">End Year (Optional):</label>
-                                            <input class="form-control" id="search-end-year" type="text" placeholder="Search..">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-
-                            <button id="submit-search" type="submit" onclick="getFunction()">Submit</button>
-                            <button id="clear" onclick="getData()">Clear</button>
-
+                            <div class="form-group">
+                                <label for="searchrecordnumber">Number of Records:</label>
+                                <input class="form-control" id="search-number" type="number" placeholder="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="searchstartyear">Start Year (Optional):</label>
+                                <input class="form-control" id="search-start-year" type="text" placeholder="Search..">
+                            </div>
+                            <div class="form-group">
+                                <label for="searchendyear">End Year (Optional):</label>
+                                <input class="form-control" id="search-end-year" type="text" placeholder="Search..">
+                            </div>
+                            <button id="submit-search" class="btn-primary rounded" type="submit" onclick="getFunction()">Submit</button>
+                            <button id="clear" class="btn-primary rounded" onclick="getData()">Clear</button>
                         </form>
-
-
-
-                        <div class="results-form">
-                            <h3>Top Articles</h3>
-                            <div id="results-display">
-
-
-                            </div>
-
-
-
-
-                            <!--Results Form End div-->
-                        </div>
-
-
-                        <!--Container End-->
                     </div>
+                </div>
+            </div>
+
+
+<div class="results-form rounded">
+    <h3 class="header-small rounded">Top Articles</h3>
+    <div id="results-display">
+
+
+    </div>
+
+
+
+
+    <!--Results Form End div-->
+</div>
+
+
+<!--Container End-->
+</div>
 
                     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                         crossorigin="anonymous"></script>
@@ -95,9 +92,7 @@
                     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
                         crossorigin="anonymous"></script>
 
-
-                    <!-- <script src="app.js"></script> -->
-
+<script src="app.js"></script>
 
 </body>
 
