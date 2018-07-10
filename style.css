@@ -1,0 +1,25 @@
+.header {
+    align-content: center;
+    text-align: center;
+    background-color: #070040;
+    padding: 30px;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+}
+.header-column{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+h3 {
+    background-color: lightgrey;
+}
+
+.search-form {
+    border: .5px solid lightgrey;
+    padding: 5px;
+}
+.form-group {
+    padding: 5px;
+}

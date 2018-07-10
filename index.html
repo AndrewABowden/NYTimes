@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <title>New York Times Search</title>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!--d block makes this a block and overrides flex-->
+        <div class="row d-block justify-content-center">
+            <div class="col-12 header-column">
+                <h1 class="header">New York Times Search</h1>
+                <br>
+                <!-- Renders Button layout dump-->
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-form">
+                        <h3>Search Parameters</h3>
+
+                        <form id="my-form" action="">
+
+                            <div class="form-group">
+                                <!--Search Term-->
+                                <label for="searchterm">Search Term:</label>
+                                <input class="form-control" id="search-term" type="text" value="" placeholder="Search..">
+                                <!--# of Records-->
+                                    </div>
+                                <div class="form-group">
+                                    <label for="searchrecordnumber">Number of Records:</label>
+                                    <input class="form-control" id="search-number" type="number" placeholder="Search..">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="searchstartyear">Start Year (Optional):</label>
+                                        <input class="form-control" id="search-start-year" type="text" placeholder="Search..">
+                                    </div>
+                                        <div class="form-group">
+                                            <label for="searchendyear">End Year (Optional):</label>
+                                            <input class="form-control" id="search-end-year" type="text" placeholder="Search..">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="submit-search" type="submit" onclick="getFunction()">Submit</button>
+                            <button id="clear" onclick="getData()">Clear</button>
+
+                        </form>
+
+
+
+                        <div class="results-form">
+                            <h3>Top Articles</h3>
+                            <div id="results-display">
+
+
+                            </div>
+
+
+
+
+                            <!--Results Form End div-->
+                        </div>
+
+
+                        <!--Container End-->
+                    </div>
+
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                        crossorigin="anonymous"></script>
+                    <!-- Latest compiled and minified JavaScript -->
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                        crossorigin="anonymous"></script>
+
+
+                    <!-- <script src="app.js"></script> -->
+
+
+</body>
+
+</html>
