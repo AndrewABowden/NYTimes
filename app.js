@@ -7,8 +7,9 @@ $("#my-form").on("submit", function (e) {
     if(isNaN(numReturns)|| numReturns  <= 0){
         numReturns = 5;
     }
+    $("#results-display").empty();
     var searchTerm = $("#search-term").val().trim();
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=dd641b91b6a44e49a1ec84b1426072f2&q=" + searchTerm
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=dd641b91b6a44e49a1ec84b1426072f2&q=" + searchTerm+'&fq=document_type:("article")'
 
 
 
@@ -18,12 +19,14 @@ $("#my-form").on("submit", function (e) {
         method: "GET"
     }).then(function (res) {
 
+        totalResults = 0;
         console.log(res)
         var results = res.response.docs;
         //put loop here
         console.log(results);
         for (var i = 0; i < numReturns && i < results.length; i++) {
             if (results[i].document_type === "article") {
+                totalResults++;
                 console.log(i)
                 var recHeadline = results[i].headline.main
                 var recURL = results[i].web_url
@@ -41,6 +44,9 @@ $("#my-form").on("submit", function (e) {
             else {
                 numReturns++;
             }
+        }
+        if(totalResults< numReturns){
+
         }
     })
 })
