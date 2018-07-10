@@ -3,8 +3,11 @@
 
 $("#my-form").on("submit", function (e) {
     e.preventDefault();
-    var numReturns = 5;
-    var searchTerm = $("#search-term").val.trim();
+    var numReturns = parseInt($("#search-number").val().trim());
+    if(isNaN(numReturns)|| numReturns  <= 0){
+        numReturns = 5;
+    }
+    var searchTerm = $("#search-term").val().trim();
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=dd641b91b6a44e49a1ec84b1426072f2&q=" + searchTerm
 
 
@@ -30,7 +33,7 @@ $("#my-form").on("submit", function (e) {
                 var holder = $("<div>")
                 var title = $("<a>").text(recHeadline).attr("href", recURL)
                 var sum = $("<p>").text(recSum)
-                var date = $("<p>").text(convertUTCDateToLocalDate(recDate))
+                var date = $("<p>").text(/*convertUTCDateToLocalDate(*/recDate)
                 var source = $("<p>").text(recSource);
                 holder.append(title, sum, date, source);
                 $("#results-display").append(holder);
